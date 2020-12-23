@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const { useState } = React
+
+const Button = ({ increment, onClickFunction }) => {
+  const handleClick = () => {
+    onClickFunction(increment)
+  }
+  return <button onClick={handleClick}>+{increment}</button>
+}
+
+const App = () => {
+  const [count, setCount] = useState(0)
+
+  const incrementCount = increment => {
+    setCount(count + increment)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button increment={1} onClickFunction={incrementCount} />
+      <Button increment={10} onClickFunction={incrementCount} />
+      <Button increment={100} onClickFunction={incrementCount} />
+      <Button increment={1000} onClickFunction={incrementCount} />
+      <span>{count}</span>
     </div>
-  );
+  )
 }
 
 export default App;
