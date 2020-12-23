@@ -1,6 +1,5 @@
 import './App.css';
-
-const { useState } = React
+import {useState} from 'react';
 
 const Button = ({ increment, onClickFunction }) => {
   const handleClick = () => {
@@ -13,7 +12,7 @@ const App = () => {
   const [count, setCount] = useState(0)
 
   const incrementCount = increment => {
-    setCount(count + increment)
+    setCount(count + increment);
   }
 
   return (
