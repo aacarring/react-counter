@@ -1,0 +1,1 @@
+Another mini-project to get the hang of React, here's a counter that lets you increment by 1, 5, 10, and 100; you can also clear the current count and start over.
