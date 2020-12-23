@@ -3,14 +3,42 @@
   padding: 0;
   box-sizing: border-box;
 }
-div {
+body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(233, 190, 153);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-button {
+.buttons {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 100px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.5em;
+}
+p {
+  display: block;
+  margin: 25px;
+  text-align: center;
+  font-size: 3em;
 }

@@ -15,14 +15,25 @@ const App = () => {
     setCount(count + increment);
   }
 
+  const clearNumber = () => {
+    setCount(0);
+  }
+
   return (
-    <div>
+    <div className="containers">
+    <div className="buttons">
       <Button increment={1} onClickFunction={incrementCount} />
+      <Button increment={5} onClickFunction={incrementCount} />
       <Button increment={10} onClickFunction={incrementCount} />
       <Button increment={100} onClickFunction={incrementCount} />
-      <Button increment={1000} onClickFunction={incrementCount} />
-      <span>{count}</span>
     </div>
+    <div className="display">
+      <p>{count}</p>
+    </div>
+    <div className="clear">
+      <button onClick={clearNumber}>Clear</button>
+    </div>
+  </div>
   )
 }
 
