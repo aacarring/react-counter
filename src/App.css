@@ -42,3 +42,18 @@ p {
   text-align: center;
   font-size: 3em;
 }
+.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  outline: none;
+  width: 100px;
+  height: 50px;
+  font-size: 1.5em;
+}
